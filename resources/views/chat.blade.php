@@ -8,6 +8,7 @@
     <title>Chat</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+
     {{-- CDN BOOTSTRAP --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,14 +18,16 @@
 <body>
     <div class="container">
         <div class="row" id="app">
-            <ul class="list-group offset-4 col-4">
+            <div class="offset-4 col-4">
                 <li class="list-group-item active">Chat Room</li>
-                <message v-for="value in chat.message">
-                    @{{ value }}
-                </message>
+                <ul class="list-group">
+                    <message v-for="value in chat.message">
+                        @{{ value }}
+                    </message>
+                </ul>
                 <input type="text" class="form-control" placeholder="Type your message here..." v-model='message'
                     @keyup.enter='send'>
-            </ul>
+            </div>
         </div>
     </div>
 
