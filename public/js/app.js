@@ -1900,6 +1900,7 @@ var app = new Vue({
     send: function send() {
       if (this.message.length != 0) {
         this.chat.message.push(this.message);
+        this.message = "";
       }
     }
   }
@@ -37422,7 +37423,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("li", { staticClass: "list-group-item" }, [_vm._v("1")])
+  return _c("li", { staticClass: "list-group-item" }, [_vm._t("default")], 2)
 }
 var staticRenderFns = []
 render._withStripped = true
