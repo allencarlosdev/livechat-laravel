@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/appAdd.css') }}">
 
 
     {{-- CDN BOOTSTRAP --}}
@@ -21,7 +22,7 @@
             <div class="offset-4 col-4">
                 <li class="list-group-item active">Chat Room</li>
                 <ul class="list-group" v-chat-scroll>
-                    <message v-for="value in chat.message" :key=value.index>
+                    <message v-for="value in chat.message" :key=value.index color='success'>
                         @{{ value }}
                     </message>
                 </ul>
