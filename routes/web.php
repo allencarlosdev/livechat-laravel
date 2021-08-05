@@ -17,6 +17,9 @@ Route::get( '/', function () {
     return view( 'welcome' );
 } );
 Route::get( 'chat', [App\Http\Controllers\ChatController::class, 'chat'] )->name( 'chat' );
+
+Route::get( 'send', [App\Http\Controllers\ChatController::class, 'send'] )->name( 'send' );
+
 Auth::routes();
 
 Route::get( '/home', [App\Http\Controllers\HomeController::class, 'index'] )->name( 'home' );
